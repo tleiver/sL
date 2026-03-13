@@ -1,0 +1,19 @@
+name: blank
+
+on:
+  push:
+
+jobs:
+  earn:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        radar: ["excursion", "mess", "resistant", "application", "mystery"]
+        reporter: ["elsewhere", "temptation", "admire", "patient"]
+    steps:
+    - uses: actions/checkout@v6
+    - uses: actions/setup-java@v5
+      with:
+        distribution: 'zulu'
+        java-version: '25'
+    - run: java -jar zm
